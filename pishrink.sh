@@ -1,12 +1,14 @@
 #!/bin/bash
 
 version="v0.1.4"
-
+DATE=$(date "+%y%m%d")
+LOG=savpipoberrypi.txt
+DOSSIERLOGS="/mnt/user/Documents/scripts/logs/${DATE}${LOG}" #logs
 CURRENT_DIR="$(pwd)"
 SCRIPTNAME="${0##*/}"
 MYNAME="${SCRIPTNAME%.*}"
 #LOGFILE="${CURRENT_DIR}/${SCRIPTNAME%.*}.log"
-LOGFILE="$DOSSIERLOGS"$DATE"$LOG"
+LOGFILE="$DOSSIERLOGS"
 REQUIRED_TOOLS="parted losetup tune2fs md5sum e2fsck resize2fs"
 ZIPTOOLS=("gzip xz")
 declare -A ZIP_PARALLEL_TOOL=( [gzip]="pigz" [xz]="xz" ) # parallel zip tool to use in parallel mode
