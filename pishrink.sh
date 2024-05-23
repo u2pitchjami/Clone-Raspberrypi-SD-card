@@ -3,7 +3,7 @@
 version="v0.1.4"
 DATE=$(date "+%y%m%d")
 LOG=savpipoberrypi.txt
-DOSSIERLOGS="/mnt/user/Documents/scripts/logs/${DATE}${LOG}" #logs
+DOSSIERLOGS="/mnt/nfs/Documents/scripts/logs/${DATE}${LOG}" #logs
 CURRENT_DIR="$(pwd)"
 SCRIPTNAME="${0##*/}"
 MYNAME="${SCRIPTNAME%.*}"
